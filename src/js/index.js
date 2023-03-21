@@ -12,11 +12,11 @@ import Home from "./component/home.jsx";
 let counter = 0;
 setInterval(() => {
     counter = counter + 1;
-    const firstSecond = counter % 60;
-    const secondSecond = Math.floor(counter / 60);
-    const thirdSecond = Math.floor (counter / 3600);
-    const fourthSecond = Math.floor (counter / 86400);
-    const fifthSecond = Math.floor (counter / 2629743);
+    const firstSecond = counter % 10;
+    const secondSecond = Math.floor((counter / 10) % 10);
+    const thirdSecond = Math.floor ((counter / 100) % 10);
+    const fourthSecond = Math.floor ((counter / 1000) % 10);
+    const fifthSecond = Math.floor ((counter / 10000) % 10);
     ReactDOM.render(
         <div className="container bg-black mt-5">
             <div className="row p-4">
